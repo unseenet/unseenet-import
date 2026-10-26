@@ -10,9 +10,10 @@
 <p align="center"><b>Start here.</b><br>
 Bring your profile, posts and pictures from Facebook, X, Mastodon and other networks into <a href="https://unseenet.org">Unseenet</a> - merged into one profile, feed and site, on your own machine.</p>
 
-> **Planned, nothing built yet.** This repository holds the plan and the
-> issues. The protocol side is
-> [UN-RFC 0049](https://github.com/unseenet/unseenet/pull/567) (draft).
+> **Being built.** The engine is here: adapters for Facebook, Mastodon and
+> Unseenet exports, and merging them into one profile and feed. The draft,
+> posting, preview and start page come next (see the issues). The protocol
+> side is UN-RFC 0049.
 
 Coming to a new network usually means starting with an empty page. With
 unseenet-import you start with what you already have: download your data

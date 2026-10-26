@@ -1,0 +1,14 @@
+name: tests
+# Pull requests and main: the tests against the core's main, on Linux, Windows and
+# macOS (the importer runs where people have their exports).
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  tests:
+    uses: unseenet/.github/.github/workflows/python-tests.yml@main
+    with:
+      core-main: true
+      other-os: true

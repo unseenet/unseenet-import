@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unseenet-import"
+dynamic = ["version"]
+description = "Start here: bring your profile, posts and pictures from Facebook, Mastodon and others into Unseenet, on your own machine (UN-RFC 0049)"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Andreas Lorensen" }]
+requires-python = ">=3.11"
+dependencies = [
+    "unseenet>=0.5,<0.7",          # articles, signatures, the vault's sealing (UN-RFC 0049)
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.urls]
+Homepage = "https://github.com/unseenet/unseenet-import"
+Unseenet = "https://unseenet.org/"
+
+[tool.setuptools.dynamic]
+version = { attr = "unseenet_import.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
